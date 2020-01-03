@@ -1,0 +1,4 @@
+cd into the Api/ folder
+run "dotnet run"
+
+Note that this is running .NET Core 3.1
