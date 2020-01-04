@@ -29,10 +29,13 @@ namespace Application.Temperatures
             {
                 var temp = await _context.Temperatures.SingleOrDefaultAsync(x => x.Id == request.Id);
 
-                temp.Temp = request.Temp;
-                temp.UpdateDate = DateTime.Now;
-
-                _context.Temperatures.Update(temp);
+                if(temp != null)
+                {
+                    temp.Temp = request.Temp;
+                    temp.UpdateDate = DateTime.Now;
+    
+                    _context.Temperatures.Update(temp);
+                }
                 
                 var success = await _context.SaveChangesAsync() > 0;;
 
