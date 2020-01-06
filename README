@@ -1,4 +1,6 @@
 cd into the Api/ folder
 run "dotnet run"
 
+The endpoint is http://localhost:5000/api/temperature
+
 Note that this is running .NET Core 3.1
